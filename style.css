@@ -1,40 +1,48 @@
-:root{
-    --primary: rgba(39, 64, 96,0.7);
+:root {
+    --primary: rgba(39, 64, 96, 0.7);
     --secondary: rgba(27, 40, 69, 0.7);
     --fill: rgb(124, 165, 184);
     --shadow: 2px 2px 10px black;
 }
+
 html {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-  }
-  #myvideo {
+}
+
+#myvideo {
     width: 100vw;
-   height: 100vh;
-   object-fit: cover;
-   position: fixed;
-   left: 0;
-   right: 0;
-   top: 0;
-   bottom: 0;
-   z-index: -1;
-  }
-  body{
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+body {
     margin: 30px 50px;
-  }
-  .top img, .products img{
+}
+
+.top img,
+.products img {
     width: 500px;
     height: 500px;
-  }
-  .wide{
+}
+
+.wide {
     min-width: 100%;
     max-width: 100%;
-  }
-  .wrapper{
+}
+
+.wrapper {
     display: grid;
     grid-gap: 20px;
-  }
-  .main-nav ul {
+}
+
+.main-nav ul {
     display: grid;
     grid-gap: 20px;
     list-style: none;
@@ -42,10 +50,12 @@ html {
     grid-template-columns: repeat(6, 1fr);
     background-color: var(--primary);
 }
-.main-nav li{
+
+.main-nav li {
     display: grid;
     grid-auto-rows: auto;
 }
+
 .main-nav a {
     background-color: var(--fill);
     display: block;
@@ -57,20 +67,23 @@ html {
     font-size: 1.1rem;
     box-shadow: var(--shadow);
 }
+
 .main-nav a:hover {
     background-color: black;
     color: white;
 }
-.container{
+
+.container {
     background-color: var(--secondary);
     padding: 1rem;
     display: grid;
-    grid-gap:20px;
-    grid-template-areas: 
-    'Title Title Title blank'
-    'context context aside aside';
+    grid-gap: 20px;
+    grid-template-areas:
+        'Title Title Title blank'
+        'context context aside aside';
 }
-.Title{
+
+.Title {
     background-color: var(--fill);
     grid-area: Title;
     font-size: 4.5rem;
@@ -78,14 +91,16 @@ html {
     text-align: center;
     box-shadow: var(--shadow);
 }
-.about{
+
+.about {
     grid-area: context;
     background-color: var(--fill);
     font-size: 1.8rem;
     padding: 1rem;
     box-shadow: var(--shadow);
 }
-.aside{
+
+.aside {
     grid-area: aside;
     background-color: var(--fill);
     font-size: 1.8rem;
@@ -102,107 +117,128 @@ footer {
 }
 
 /*Products*/
-.top{
+.top {
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px,1fr));
-    grid-gap:30px;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-gap: 30px;
 }
-.top .bait img{
+
+.top .bait img {
     max-width: 100%;
     min-width: 100%;
 }
-.top .bait{
+
+.top .bait {
     border: 20px solid var(--primary);
 }
-.top h6{
-    color:white;
+
+.top h6 {
+    color: white;
     font-size: 2.8rem;
-    margin:0;
+    margin: 0;
 }
-.top .btn{
+
+.top .btn {
     background-color: black;
-    color:white;
+    color: white;
     padding: 0.6rem 1.3rem;
     text-decoration: none;
     border: 0;
     font-size: 1.5rem;
 }
-.night{
+
+.night {
     position: relative;
     text-align: center;
 }
-.night h6{
+
+.night h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.night a{
+
+.night a {
     position: absolute;
     bottom: 8px;
     left: 18px;
 }
-.waxworms{
+
+.waxworms {
     position: relative;
     text-align: center;
 }
-.waxworms h6{
+
+.waxworms h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.waxworms a{
+
+.waxworms a {
     position: absolute;
     bottom: 8px;
     left: 18px;
 }
-.maggots{
+
+.maggots {
     position: relative;
     text-align: center;
 }
-.maggots h6{
+
+.maggots h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.maggots a{
+
+.maggots a {
     position: absolute;
     bottom: 8px;
     left: 18px;
 }
-.f{
+
+.f {
     font-size: 4rem;
     border-bottom: 2px solid black;
 }
-.products{
+
+.products {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
-.products div{
+
+.products div {
     background-color: var(--fill);
     border: 10px solid var(--primary);
 }
-.products div img{
-    width:100%;
+
+.products div img {
+    width: 100%;
 }
-.products div p{
+
+.products div p {
     margin: 0.8rem;
     font-size: 1.5rem;
 }
-@media(max-width: 1050px){
-    .top{
+
+@media(max-width: 1050px) {
+    .top {
         grid-template-columns: 1fr;
     }
-    .main-nav ul{
+
+    .main-nav ul {
         grid-template-columns: 1fr;
     }
-    .container{
-        grid-template-areas: 
-        'Title'
-        'context'
-        'aside';
+
+    .container {
+        grid-template-areas:
+            'Title'
+            'context'
+            'aside';
     }
 }
